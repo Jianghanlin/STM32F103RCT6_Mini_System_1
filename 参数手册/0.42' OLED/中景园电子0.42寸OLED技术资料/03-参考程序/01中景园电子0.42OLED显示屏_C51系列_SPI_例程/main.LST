@@ -1,0 +1,120 @@
+C51 COMPILER V9.59.0.0   MAIN                                                              02/25/2019 17:16:38 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\SRC) DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          //////////////////////////////////////////////////////////////////////////////////   
+   2          //本程序只供学习使用，未经作者许可，不得用于其它任何用途
+   3          //中景园电子
+   4          //店铺地址：http://shop73023976.taobao.com/?spm=2013.1.0.0.M4PqC2
+   5          //
+   6          //  文 件 名   : main.c
+   7          //  版 本 号   : v2.0
+   8          //  作    者   : HuangKai
+   9          //  生成日期   : 2018-0101
+  10          //  最近修改   : 
+  11          //  功能描述   : OLED 4接口演示例程(51系列)
+  12          //              说明: 
+  13          //              ----------------------------------------------------------------
+  14          //              GND    电源地
+  15          //              VCC  接5V或3.3v电源
+  16          //              SCL   P1^0（SCL）
+  17          //              SDA   P1^1（SDA）
+  18          //              RES  接P12
+  19          //              DC   接P13
+  20          //              CS   接P14               
+  21          //              ----------------------------------------------------------------
+  22          // 修改历史   :
+  23          // 日    期   : 
+  24          // 作    者   : HuangKai
+  25          // 修改内容   : 创建文件
+  26          //版权所有，盗版必究。
+  27          //Copyright(C) 中景园电子2018/3/16
+  28          //All rights reserved
+  29          //******************************************************************************/
+  30          #include "REG51.h"
+  31          #include "oled.h"
+  32          #include "bmp.h"
+  33          
+  34           int main(void)
+  35           {  u8 t;
+  36   1          //delay_init();        //延时函数初始化   
+  37   1        //  NVIC_Configuration();    //设置NVIC中断分组2:2位抢占优先级，2位响应优先级   LED_Init();          //LED端口
+             -初始化
+  38   1          OLED_Init();      //初始化OLED  
+  39   1          OLED_Clear()    ; 
+  40   1          /*
+  41   1           OLED_ShowString(30,0,"OLED TEST");
+  42   1          OLED_ShowString(8,2,"ZHONGJINGYUAN");  
+  43   1          OLED_ShowString(20,4,"2014/05/01");  
+  44   1          OLED_ShowString(0,6,"ASCII:");  
+  45   1          OLED_ShowString(63,6,"CODE:");  
+  46   1          t=' '; 
+  47   1          OLED_ShowCHinese(0,0,0);//中
+  48   1          OLED_ShowCHinese(18,0,1);//景
+  49   1          OLED_ShowCHinese(36,0,2);//园
+  50   1          OLED_ShowCHinese(54,0,3);//电
+  51   1          OLED_ShowCHinese(72,0,4);//子
+  52   1          OLED_ShowCHinese(90,0,5);//科
+  53   1          OLED_ShowCHinese(108,0,6);//技
+  54   1          */  
+C51 COMPILER V9.59.0.0   MAIN                                                              02/25/2019 17:16:38 PAGE 2   
+
+  55   1          t=' ';
+  56   1        while(1) 
+  57   1        {   
+  58   2          OLED_Clear();
+  59   2          OLED_ShowCHinese(10,0,0);//中
+  60   2          OLED_ShowCHinese(28,0,1);//景
+  61   2          OLED_ShowCHinese(46,0,2);//园
+  62   2      //    OLED_ShowCHinese(54,0,3);//电
+  63   2      //    OLED_ShowCHinese(72,0,4);//子
+  64   2      //    OLED_ShowCHinese(90,0,5);//科
+  65   2      //    OLED_ShowCHinese(108,0,6);//技
+  66   2          OLED_ShowString(0,3,"0.42'OLED ");
+  67   2        //  OLED_ShowString(8,2,"ZHONGJINGYUAN");  
+  68   2      //    OLED_ShowString(0,4,"2018/05/01");  
+  69   2      //    OLED_ShowString(0,6,"ASCII:");  
+  70   2      //    OLED_ShowString(63,6,"CODE:");  
+  71   2      //    OLED_ShowChar(48,6,t);//显示ASCII字符    
+  72   2      //    t++;
+  73   2      //    if(t>'~')t=' ';
+  74   2      //    OLED_ShowNum(103,6,t,3,16);//显示ASCII字符的码值  
+  75   2      //      
+  76   2      //    
+  77   2          delay_ms(2000);
+  78   2            delay_ms(2000);
+  79   2            
+  80   2      
+  81   2          OLED_Clear();
+  82   2      
+  83   2          OLED_DrawBMP(0,0,72,5,BMP1);  //图片显示(图片显示慎用，生成的字表较大，会占用较多空间，FLASH空间8K以下慎
+             -用)
+  84   2      
+  85   2            
+  86   2              delay_ms(2000);
+  87   2                delay_ms(2000);
+  88   2          //OLED_DrawBMP(0,0,128,8,BMP2);
+  89   2          delay_ms(500);
+  90   2        }   
+  91   1        
+  92   1      }
+  93          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    111    ----
+   CONSTANT SIZE    =   1395    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

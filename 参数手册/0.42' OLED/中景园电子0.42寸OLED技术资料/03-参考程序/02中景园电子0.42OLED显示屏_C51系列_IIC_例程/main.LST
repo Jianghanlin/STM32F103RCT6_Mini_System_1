@@ -1,0 +1,107 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              02/25/2019 17:37:28 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil_v4\C51\BIN\C51.EXE main.c BROWSE INCDIR(.\SRC) DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          //////////////////////////////////////////////////////////////////////////////////   
+   2          //本程序只供学习使用，未经作者许可，不得用于其它任何用途
+   3          //中景园电子
+   4          //店铺地址：http://shop73023976.taobao.com/?spm=2013.1.0.0.M4PqC2
+   5          //
+   6          //  文 件 名   : main.c
+   7          //  版 本 号   : v2.0
+   8          //  作    者   : HuangKai
+   9          //  生成日期   : 2014-0101
+  10          //  最近修改   : 
+  11          //  功能描述   : OLED 4接口演示例程(51系列)
+  12          //              说明: 
+  13          //              ----------------------------------------------------------------
+  14          //              GND    电源地
+  15          //              VCC  接5V或3.3v电源
+  16          //              SCL   P1^0（SCL）
+  17          //              SDA   P1^1（SDA）
+  18          
+  19          // 修改历史   :
+  20          // 日    期   : 
+  21          // 作    者   : HuangKai
+  22          // 修改内容   : 创建文件
+  23          //版权所有，盗版必究。
+  24          //Copyright(C) 中景园电子2014/3/16
+  25          //All rights reserved
+  26          //******************************************************************************/
+  27          #include "REG51.h"
+  28          #include "oled.h"
+  29          #include "bmp.h"
+  30          
+  31           int main(void)
+  32           {  u8 t;
+  33   1            OLED_Init();      //初始化OLED  
+  34   1          OLED_Clear()    ; 
+  35   1        
+  36   1          t=' ';
+  37   1          OLED_ShowCHinese(0,0,0);//中
+  38   1              OLED_ShowCHinese(18,0,1);//景
+  39   1          OLED_ShowCHinese(36,0,2);//园
+  40   1          OLED_ShowCHinese(54,0,3);//电
+  41   1          OLED_ShowCHinese(72,0,4);//子
+  42   1          OLED_ShowCHinese(90,0,5);//科
+  43   1          OLED_ShowCHinese(108,0,6);//技
+  44   1        while(1) 
+  45   1        {   
+  46   2          OLED_Clear();
+  47   2          OLED_ShowCHinese(10,0,0);//中
+  48   2          OLED_ShowCHinese(28,0,1);//景
+  49   2          OLED_ShowCHinese(46,0,2);//园
+  50   2      //    OLED_ShowCHinese(54,0,3);//电
+  51   2      //    OLED_ShowCHinese(72,0,4);//子
+  52   2      //    OLED_ShowCHinese(90,0,5);//科
+  53   2      //    OLED_ShowCHinese(108,0,6);//技
+  54   2          OLED_ShowString(0,3,"0.42'OLED ",16);
+  55   2        //  OLED_ShowString(8,2,"ZHONGJINGYUAN");  
+C51 COMPILER V9.52.0.0   MAIN                                                              02/25/2019 17:37:28 PAGE 2   
+
+  56   2      //    OLED_ShowString(0,4,"2018/05/01");  
+  57   2      //    OLED_ShowString(0,6,"ASCII:");  
+  58   2      //    OLED_ShowString(63,6,"CODE:");  
+  59   2      //    OLED_ShowChar(48,6,t);//显示ASCII字符    
+  60   2      //    t++;
+  61   2      //    if(t>'~')t=' ';
+  62   2      //    OLED_ShowNum(103,6,t,3,16);//显示ASCII字符的码值  
+  63   2      //      
+  64   2      //    
+  65   2          delay_ms(2000);
+  66   2            delay_ms(2000);
+  67   2            
+  68   2      
+  69   2          OLED_Clear();
+  70   2      
+  71   2          OLED_DrawBMP(0,0,72,5,BMP1);  //图片显示(图片显示慎用，生成的字表较大，会占用较多空间，FLASH空间8K以下慎
+             -用)
+  72   2      
+  73   2            
+  74   2              delay_ms(2000);
+  75   2                delay_ms(2000);
+  76   2          //OLED_DrawBMP(0,0,128,8,BMP2);
+  77   2          delay_ms(500);
+  78   2        }   
+  79   1        
+  80   1      }
+  81            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    175    ----
+   CONSTANT SIZE    =   1395    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,9 @@
+DRC Rules Export File for PCB: G:\Projects\My Github Repositories\STM32F103RCT6_Mini_System\Altium\STM32F103RCT6_Mini_System\STM32F103RCT6_Mini_System.PcbDoc
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=6.00
+RuleKind=Width|RuleName=Width_PWR|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Width_GND|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.00
+RuleKind=Clearance|RuleName=Clearance_inpolygon|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=inpolygon_to_keepout|Scope=Board|Minimum=20.00

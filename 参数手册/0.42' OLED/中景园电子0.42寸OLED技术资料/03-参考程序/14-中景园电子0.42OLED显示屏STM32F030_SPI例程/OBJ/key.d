@@ -1,0 +1,14 @@
+..\obj\key.o: ..\HARDWARE\Key.c
+..\obj\key.o: ..\User\stm32f0xx.h
+..\obj\key.o: ..\CORE\core_cm0.h
+..\obj\key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\key.o: ..\CORE\core_cmInstr.h
+..\obj\key.o: ..\CORE\core_cmFunc.h
+..\obj\key.o: ..\User\system_stm32f0xx.h
+..\obj\key.o: ..\User\stm32f0xx_conf.h
+..\obj\key.o: ..\STM32F03x_FWLib\inc\stm32f0xx_gpio.h
+..\obj\key.o: ..\User\stm32f0xx.h
+..\obj\key.o: ..\STM32F03x_FWLib\inc\stm32f0xx_rcc.h
+..\obj\key.o: ..\STM32F03x_FWLib\inc\stm32f0xx_usart.h
+..\obj\key.o: ..\STM32F03x_FWLib\inc\stm32f0xx_misc.h
+..\obj\key.o: ..\SYSTEM\delay.h

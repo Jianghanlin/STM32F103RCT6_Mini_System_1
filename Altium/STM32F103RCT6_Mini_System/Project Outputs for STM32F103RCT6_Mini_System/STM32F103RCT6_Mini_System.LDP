@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: G:\Projects\My Github Repositories\STM32F103RCT6_Mini_System\Altium\STM32F103RCT6_Mini_System\STM32F103RCT6_Mini_System.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=stm32f103rct6_mini_system-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=stm32f103rct6_mini_system-slotholes.txt|DrillLayers=gtl,gbl
